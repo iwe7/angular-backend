@@ -5,11 +5,62 @@
   color: rgba(255, 255, 255, 0.87);
 }
 
+.navigation-header{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  height: 140px;
+  width: 100%;
+  color: #FFF;
+  background: url('./../../../assets/images/background/navigation-header-bg.png') no-repeat top center;
+  background-size: cover;
+  position: relative;
+
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    background: rgba($color: #000000, $alpha: .5)
+  }
+  >div{
+    z-index: 2;
+    margin-top: 39px;
+  }
+  >.avatar{
+    margin-right: 19px;
+    margin-left: 30px;
+
+    >img{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+
+  >.info{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+
+    >.nickname{
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    >.account{
+      font-size: 12px;
+    }
+  }
+}
+
 .navigation-container {
   flex-direction: column;
   box-sizing: border-box;
   display: flex;
-  height: 100%;
+  height: calc(100% - 140px);
 }
 
 .navigation-scrollbar-container {
@@ -17,36 +68,4 @@
   box-sizing: border-box;
   display: flex;
   height: 100%;
-}
-
-.navigation-footer {
-  flex-direction: row;
-  box-sizing: border-box;
-  display: flex;
-  border-top: 1px solid rgba(0, 0, 0, .1);
-
-  > a {
-    display: flex;
-    align-items: center;
-    flex: 1 1 100%;
-    box-sizing: border-box;
-    max-width: 100%;
-    background-color: rgba(0, 0, 0, .12);
-    color: rgba(255, 255, 255, .8);
-    text-decoration: none;
-    text-align: center;
-    min-width: 88px;
-    line-height: 36px;
-    padding: 0 24px;
-
-    > mat-icon {
-      font-size: 16px;
-      width: 16px;
-      height: 16px;
-      min-width: 16px;
-      min-height: 16px;
-      line-height: 16px;
-      margin-right: 16px;
-    }
-  }
 }

@@ -5,7 +5,6 @@
 @import '~@swimlane/ngx-datatable/release/themes/material.css';
 @import '~@swimlane/ngx-datatable/release/assets/icons.css';
 
-
 @include mat-core();
 $primary: mat-palette($mat-indigo);
 $accent: mat-palette($mat-pink, A200, A100, A400);
@@ -15,7 +14,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
 @import "scss/index";
 @import "scss/app-theme";
 @include angular-material-theme($theme);
-@include stbui-app-theme($theme)
+@include stbui-app-theme($theme);
 @include stbui-theme-color();
 
 

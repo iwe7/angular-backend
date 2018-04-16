@@ -11,7 +11,9 @@ const routes: Routes = [
   {path: 'sigin', component: SigninComponent},
   {path: 'sigup', component: SignupComponent},
   {
-    path: '', component: AdminComponent, children: [
+    path: '', 
+    component: AdminComponent, 
+    children: [
       {path: 'apps/navigation', loadChildren: './navigation/navigation.module#NavigationModule'},
       {path: 'apps/chats', loadChildren: './chats/chats.module#ChatsModule'},
       {path: 'apps/mail', loadChildren: './mail/mail.module#MailModule'},

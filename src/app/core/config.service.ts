@@ -11,9 +11,9 @@ export class ConfigService {
   constructor() {
     this.defaultSettings = {
       colorClasses: {
-        header: 'stbui-background-white',
+        header: 'stbui-background-primary',
         footer: 'stbui-background-blue',
-        brand: 'stbui-background-blue',
+        brand: 'stbui-background-primary',
         navigation: 'stbui-background-dark'
       },
       layout: {
