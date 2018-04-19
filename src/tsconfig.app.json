@@ -4,10 +4,18 @@
     "outDir": "../out-tsc/app",
     "baseUrl": "./",
     "module": "es2015",
-    "types": []
+    "types": [],
+    "paths": {
+      "@core/*": ["app/core/*"],
+      "@env/*": ["environments/*"],
+      "@shared/*": ["app/shared/*"],
+      "@classes/*": ["app/classes/*"],
+      "@interfaces/*": ["app/interfaces/*"],
+      "@components/*": ["app/components/*"],
+      "@modules/*": ["app/modules/*"],
+      "@directives/*": ["app/directives/*"],
+      "@addons/*": ["app/addons/*"]
+    }
   },
-  "exclude": [
-    "test.ts",
-    "**/*.spec.ts"
-  ]
+  "exclude": ["test.ts", "**/*.spec.ts"]
 }
