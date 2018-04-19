@@ -11,8 +11,8 @@ const routes: Routes = [
   {path: 'sigin', component: SigninComponent},
   {path: 'sigup', component: SignupComponent},
   {
-    path: '', 
-    component: AdminComponent, 
+    path: '',
+    component: AdminComponent,
     children: [
       {path: 'apps/navigation', loadChildren: './navigation/navigation.module#NavigationModule'},
       {path: 'apps/chats', loadChildren: './chats/chats.module#ChatsModule'},
@@ -22,6 +22,7 @@ const routes: Routes = [
       {path: 'forms', loadChildren: './forms/forms.module#FormModule'},
       {path: 'materials', loadChildren: './materials/materials.module#MaterialsModule'},
       {path: 'pages', loadChildren: './pages/pages.module#PagesModule'},
+      {path: 'modules', loadChildren: './modules/modules.module#ModulesModule'},
       {path: 'components/chart', loadChildren: './chart/chart.module#ChartModule'},
       {path: 'analysis', loadChildren: './analysis/analysis.module#AnalysisModule'},
       {path: 'crm', loadChildren: './crm/crm.module#CrmModule'},
