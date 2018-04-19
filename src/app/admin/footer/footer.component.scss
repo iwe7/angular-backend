@@ -1,4 +1,5 @@
 .footer {
+<<<<<<< HEAD
   background: #f7f7f7;
   color: #808080;
   line-height: 36px;
@@ -7,7 +8,15 @@
   border-top: 1px solid #e0e0e0;
 
   a {
+=======
+    background: #263238;
+>>>>>>> 8dd581ef4860bfdfda0edd154bba04c9f78dfc64
     color: #80CBC4;
-    cursor: pointer;
-  }
+    line-height: 36px;
+    padding: 0 20px;
+    font-size: 12px;
+    a {
+        color: #80CBC4;
+        cursor: pointer;
+    }
 }
