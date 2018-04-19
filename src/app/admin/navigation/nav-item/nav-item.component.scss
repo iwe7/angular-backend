@@ -40,6 +40,22 @@
   }
 }
 
+.nav-item-abbreviated .navigation-link{
+  &-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+  }
+
+  &-title {
+    display: none;
+  }
+}
+
 .navigation-link.active {
   background: #2196f3;
   color: #fff;

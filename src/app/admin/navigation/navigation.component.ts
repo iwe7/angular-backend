@@ -1,13 +1,16 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { NavigationAnimation } from './navigation.animation';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { NavigationService } from './navigation.service';
 
 @Component({
   selector: 'stbui-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  styleUrls: ['./navigation.component.scss'],
+  animations: NavigationAnimation
 })
 export class NavigationComponent implements OnInit, OnDestroy {
+  @Input() type:string = '';
 
   navigationModel: any[];
   navigationModelChangeSubscription: Subscription;

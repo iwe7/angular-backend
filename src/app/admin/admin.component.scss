@@ -23,10 +23,10 @@ $height__main-toolbar: 64px;
 }
 
 .sidenav {
-  width: 250px;
   max-width: 250px;
   overflow-x: hidden;
   z-index: 4;
+  box-shadow: 3px 85px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
 .sidenav-container {

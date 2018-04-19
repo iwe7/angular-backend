@@ -14,7 +14,7 @@ export class ConfigService {
         header: 'stbui-background-primary',
         footer: 'stbui-background-blue',
         brand: 'stbui-background-primary',
-        navigation: 'stbui-background-dark'
+        navigation: 'stbui-background-white'
       },
       layout: {
         mode: 'fullwidth',

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import * as screenfull from 'screenfull';
 import { NavigationStart, NavigationEnd, Router } from '@angular/router';
 
@@ -10,10 +10,11 @@ import { NavigationStart, NavigationEnd, Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   @Input() customizer;
-  @Input() sidenav;
+  @Output() onToggleSidenav = new EventEmitter<boolean>();
 
   isFullscreen: boolean = false;
   showLoading: boolean;
+  isSidenavOpen: boolean = true;
 
   constructor(private router: Router) {
     router.events.subscribe((event) => {
@@ -33,6 +34,11 @@ export class HeaderComponent implements OnInit {
       screenfull.toggle();
       this.isFullscreen = !this.isFullscreen;
     }
+  }
+
+  toggleSidenav() {
+    this.isSidenavOpen = !this.isSidenavOpen;
+    this.onToggleSidenav.emit(this.isSidenavOpen);
   }
 
 }

@@ -1,9 +1,11 @@
+$height__main-toolbar: 64px;
+
 :host {
 	display: block;
 }
 
 .brand-toolbar {
-  height: 64px;
+  height: $height__main-toolbar;
   font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
   padding: 0 16px;
   width: 100%;
@@ -11,5 +13,10 @@
 
 .logo-img{
   width: 96px;
-  height: 22px;
+  height: $height__main-toolbar;
+  line-height: $height__main-toolbar;
+
+  >img{
+    width: 100%;
+  }
 }

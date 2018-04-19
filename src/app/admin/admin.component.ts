@@ -22,6 +22,7 @@ export class AdminComponent implements OnInit {
   sidenavOpen: boolean = true;
   sidenavMode: string = 'side';
   sidenavAlign: string = 'start';
+  sidenavType:string = 'integrated'; 
   customizerSidenavAlign: string = 'end';
 
   title = '后台管理系统 - Power by stbui';
@@ -76,5 +77,9 @@ export class AdminComponent implements OnInit {
    */
   onActivate(event, scrollContainer) {
     scrollContainer.scrollTop = 0;
+  }
+
+  navToggle(isNavOpen: boolean) {
+    this.sidenavType = isNavOpen ? 'integrated' : 'abbreviated';
   }
 }

@@ -151,5 +151,15 @@ export const NavigationAnimation = [
     })),
     transition('void => *', animate('300ms ease-out')),
     transition('* => void', animate('300ms ease-in'))
+  ]),
+
+  trigger('navToggle', [
+    state('integrated', style({
+      width: '250px'
+    })),
+    state('abbreviated', style({
+      width: '90px'
+    })),
+    transition('integrated <=> abbreviated', animate('300ms ease'))
   ])
 ];

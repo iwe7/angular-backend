@@ -1,5 +1,5 @@
-<div class="brand-toolbar mat-elevation-z2" fxLayout="row" fxLayoutAlign="center center">
+<div class="brand-toolbar mat-elevation-z2" fxLayout="row" fxLayoutAlign="center center" [@brandToggle]="type">
   <a class="logo-img" href="/">
-    <img src="./assets/logo.svg" alt="Notadd">
+    <img src="./assets/logo.{{type}}.svg" alt="Notadd">
   </a>
 </div>

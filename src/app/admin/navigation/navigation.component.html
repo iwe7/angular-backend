@@ -1,4 +1,4 @@
-<div class="navigation-header">
+<div class="navigation-header" [ngClass]="type" [@navToggle]="type">
   <div class="avatar">
     <img src="./assets/images/avatars/8.jpg">
   </div>
@@ -7,12 +7,12 @@
     <div class="account">las@notadd.com</div>
   </div>
 </div>
-<div class="navigation-container">
+<div class="navigation-container" [@navToggle]="type">
   <div class="navigation-scrollbar-container">
     <perfect-scrollbar>
       <ng-container *ngFor="let navigation of navigationModel">
-        <stbui-nav-collapse *ngIf="navigation.type == 'collapse'" [item]="navigation"></stbui-nav-collapse>
-        <stbui-nav-item *ngIf="navigation.type=='item'" [item]="navigation"></stbui-nav-item>
+        <stbui-nav-collapse [type]="type" *ngIf="navigation.type == 'collapse'" [item]="navigation"></stbui-nav-collapse>
+        <stbui-nav-item [ngClass]="'nav-item-' + type" *ngIf="navigation.type=='item'" [item]="navigation"></stbui-nav-item>
       </ng-container>
     </perfect-scrollbar>
   </div>
