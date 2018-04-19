@@ -3,7 +3,9 @@
     <mat-icon>menu</mat-icon>
   </button>
 
-  <span fxFlex></span>
+  <span fxFlex>
+    <button mat-button routerLink="/modules/settings">全局</button>
+  </span>
 
   <button mat-icon-button [fxHide]="true" [fxHide.gt-sm]="false" (click)="toggleFullscreen()">
     <mat-icon *ngIf="!isFullscreen">fullscreen</mat-icon>

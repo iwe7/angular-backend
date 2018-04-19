@@ -1,58 +1,55 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { ServicesComponent } from './services/services.component';
-import { UserComponent } from './user/user.component';
-import { ProfileComponent } from './profile/profile.component';
-import { BlogComponent } from './blog/blog.component';
-import { FileManagerComponent } from './file-manager/file-manager.component';
-import { ProjectComponent } from './project/project.component';
-
+import { AboutComponent } from "./about/about.component";
+import { ContactComponent } from "./contact/contact.component";
+import { ServicesComponent } from "./services/services.component";
+import { UserComponent } from "./user/user.component";
+import { ProfileComponent } from "./profile/profile.component";
+import { BlogComponent } from "./blog/blog.component";
+import { FileManagerComponent } from "./file-manager/file-manager.component";
+import { ProjectComponent } from "./project/project.component";
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: UserComponent
   },
   {
-    path: 'about',
+    path: "about",
     component: AboutComponent
   },
   {
-    path: 'contact',
+    path: "contact",
     component: ContactComponent
   },
   {
-    path: 'services',
+    path: "services",
     component: ServicesComponent
   },
   {
-    path: 'user',
+    path: "user",
     component: UserComponent
   },
   {
-    path: 'profile',
+    path: "profile",
     component: ProfileComponent
   },
   {
-    path: 'blog',
+    path: "blog",
     component: BlogComponent
   },
   {
-    path: 'file-manager',
+    path: "file-manager",
     component: FileManagerComponent
   },
   {
-    path: 'projects',
+    path: "projects",
     component: ProjectComponent
-  },
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-
-export class PagesRoutingModule {
-}
+export class PagesRoutingModule {}

@@ -1,9 +1,8 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
 
 @Injectable()
 export class ConfigService {
-
   settings: any;
   defaultSettings: any;
   onSettingsChanged: BehaviorSubject<any>;
@@ -11,16 +10,16 @@ export class ConfigService {
   constructor() {
     this.defaultSettings = {
       colorClasses: {
-        header: 'stbui-background-primary',
-        footer: 'stbui-background-blue',
-        brand: 'stbui-background-primary',
-        navigation: 'stbui-background-dark'
+        header: "stbui-background-primary",
+        footer: "stbui-background-blue",
+        brand: "stbui-background-primary",
+        navigation: "stbui-background-dark"
       },
       layout: {
-        mode: 'fullwidth',
-        navigation: 'left',
-        header: 'below',
-        footer: 'below'
+        mode: "fullwidth",
+        navigation: "left",
+        header: "below",
+        footer: "below"
       }
     };
 
