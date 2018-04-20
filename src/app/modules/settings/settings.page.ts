@@ -90,13 +90,14 @@ export class SettingsPage extends BasePage {
       ]
     }
   ];
+  editor: any;
   @ViewChild("text") text: ElementRef;
   constructor(injector: Injector, public fb: FormBuilderService) {
     super(injector, "全局设置");
   }
 
   ngOnInit() {
-    var editor = CodeMirror.fromTextArea(this.text.nativeElement, {
+    this.editor = CodeMirror.fromTextArea(this.text.nativeElement, {
       indentWithTabs: true,
       smartIndent: true,
       styleActiveLine: true,
@@ -110,14 +111,13 @@ export class SettingsPage extends BasePage {
         json: true
       }
     });
-    editor.setValue(`${JSON.stringify(this.fields)}`);
-    editor.on("keyup", () => {
-      this.fields = JSON.parse(editor.getValue());
-    });
+    this.editor.setValue(`${JSON.stringify(this.fields)}`);
+    this.editor.on("keyup", () => {});
   }
 
   creatForm() {
     this.form.clear();
+    this.fields = JSON.parse(this.editor.getValue());
     this.fb.createForm(this.fields, this.form).subscribe(res => {
       console.log(res);
     });

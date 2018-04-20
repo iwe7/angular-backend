@@ -7,11 +7,7 @@
     {
       "root": "src",
       "outDir": "dist",
-      "assets": [
-        "assets",
-        "favicon.ico",
-        "manifest.json"
-      ],
+      "assets": ["assets", "favicon.ico", "manifest.json"],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
@@ -22,21 +18,22 @@
       "serviceWorker": true,
       "styles": [
         {
-  "input": "../node_modules/normalize.css/normalize.css",
-  "output": "lib"
-},
+          "input": "../node_modules/normalize.css/normalize.css",
+          "output": "lib"
+        },
         {
-  "input": "../node_modules/material-design-icons/iconfont/material-icons.css",
-  "output": "lib"
-},
+          "input":
+            "../node_modules/material-design-icons/iconfont/material-icons.css",
+          "output": "lib"
+        },
         {
-  "input": "../node_modules/quill/dist/quill.snow.css",
-  "output": "lib"
-},
+          "input": "../node_modules/quill/dist/quill.snow.css",
+          "output": "lib"
+        },
         {
-  "input": "styles.scss",
-  "output": "stbui"
-}
+          "input": "styles.scss",
+          "output": "stbui"
+        }
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -76,8 +73,7 @@
     "class": {
       "spec": false
     },
-    "component": {
-    }
+    "component": {}
   },
   "warnings": {
     "typescriptMismatch": false

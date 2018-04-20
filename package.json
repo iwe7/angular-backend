@@ -1,6 +1,7 @@
 {
   "name": "angular-material-app",
-  "description": "基于最新Angular 5框架与Material 2技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。",
+  "description":
+    "基于最新Angular 5框架与Material 2技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。",
   "homepage": "https://github.com/stbui/angular-material-app",
   "bugs": "https://github.com/stbui/angular-material-app/issues",
   "version": "0.5.2",
@@ -11,15 +12,19 @@
     "start": "ng serve --extract-css",
     "start:proxy": "ng serve --extract-css --proxy-config proxy.conf.js",
     "build": "ng build --extract-css --prod --aot --environment=prod",
-    "build:github": "ng build --extract-css --prod --aot --environment=github --base-href=/angular-material-app/",
+    "build:github":
+      "ng build --extract-css --prod --aot --environment=github --base-href=/angular-material-app/",
     "publish:github": "ngh",
     "ngsw-config": "./node_modules/.bin/ngsw-config dist src/ngsw-config.json",
     "ngsw-copy": "cp node_modules/@angular/service-worker/ngsw-worker.js dist/",
-    "build-prod-ngsw": "ng build --extract-css --prod --aot --environment=ngsw && npm run ngsw-config && npm run ngsw-copy",
-    "build-github-ngsw": "npm run build:github && npm run ngsw-config && npm run ngsw-copy",
+    "build-prod-ngsw":
+      "ng build --extract-css --prod --aot --environment=ngsw && npm run ngsw-config && npm run ngsw-copy",
+    "build-github-ngsw":
+      "npm run build:github && npm run ngsw-config && npm run ngsw-copy",
     "start:electron": "electron .",
     "electron-copy": "cp ./scripts/electron/electron.js dist/",
-    "build-prod-electron": "ng build --extract-css --prod --aot --environment=prod --base-href=./ && npm run electron-copy",
+    "build-prod-electron":
+      "ng build --extract-css --prod --aot --environment=prod --base-href=./ && npm run electron-copy",
     "build-pack-electron": "node ./scripts/electron/build.js",
     "docs": "hads ./docs -o",
     "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json -s",
