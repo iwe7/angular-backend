@@ -1,1 +1,11 @@
-setting
+<h2 class="title">测试json表单</h2>
+
+
+<ng-container #form></ng-container>
+
+
+
+<textarea #text cols="30" rows="10">{{fields|json}}</textarea>
+
+
+<button mat-button (click)="creatForm()">创建</button>

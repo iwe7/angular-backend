@@ -1,26 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import 'hammerjs';
-import { ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app.routing';
-import { AdminModule } from './admin/admin.module';
-import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import "hammerjs";
+import { ReactiveFormsModule } from "@angular/forms";
+import { AppRoutingModule } from "./app.routing";
+import { AdminModule } from "./admin/admin.module";
+import { AppComponent } from "./app.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
 
-import { SignupComponent } from './pages/signup/signup.component';
-import { SigninComponent } from './pages/signin/signin.component';
+import { SignupComponent } from "./pages/signup/signup.component";
+import { SigninComponent } from "./pages/signin/signin.component";
 
-
-import { ServiceWorkerModule } from '@angular/service-worker';
+import { ServiceWorkerModule } from "@angular/service-worker";
 // 共享模块
-import { SharedModule } from '@shared/shared.module';
-import { FireBaseComponentsModule } from '@shared/firebase.module';
+import { SharedModule } from "@shared/shared.module";
+import { FireBaseComponentsModule } from "@shared/firebase.module";
 // 核心模块 全局引入
-import { CoreModule } from '@core/core.module';
+import { CoreModule } from "@core/core.module";
 // 环境变量
-import { environment } from '@env/environment';
+import { environment } from "@env/environment";
 
+// lazy form fileds
+import { FormBuilderRouterModule } from "@modules/form-builder/form-builder.router";
 
 @NgModule({
   declarations: [
@@ -38,10 +39,10 @@ import { environment } from '@env/environment';
     AppRoutingModule,
     FireBaseComponentsModule,
     ReactiveFormsModule,
-    environment['ngsw'] ? ServiceWorkerModule.register('./ngsw-worker.js') : []
+    FormBuilderRouterModule,
+    environment["ngsw"] ? ServiceWorkerModule.register("./ngsw-worker.js") : []
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}

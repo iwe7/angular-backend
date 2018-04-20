@@ -10,17 +10,10 @@ export class ConfigService {
   constructor() {
     this.defaultSettings = {
       colorClasses: {
-<<<<<<< HEAD
         header: 'stbui-background-primary',
         footer: 'stbui-background-blue',
         brand: 'stbui-background-primary',
         navigation: 'stbui-background-white'
-=======
-        header: "stbui-background-primary",
-        footer: "stbui-background-blue",
-        brand: "stbui-background-primary",
-        navigation: "stbui-background-dark"
->>>>>>> 8dd581ef4860bfdfda0edd154bba04c9f78dfc64
       },
       layout: {
         mode: "fullwidth",
